@@ -2,11 +2,11 @@ package org.sechelc.loadbalancer;
 
 import java.util.Random;
 
+/**
+ * Concrete implementation of BaseLoadBalancer.
+ * returns a random provider index.
+ */
 public class RandomLoadBalancer extends BaseLoadBalancer {
-
-    public RandomLoadBalancer() {
-        super();
-    }
 
     @Override
     public int getNextProviderIndex() {

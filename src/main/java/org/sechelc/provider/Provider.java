@@ -2,8 +2,11 @@ package org.sechelc.provider;
 
 import java.util.Objects;
 
+/**
+ * Basic implementation of the ProviderInterface
+ */
 public class Provider implements ProviderInterface {
-    private String uuid;
+    private final String uuid;
     private int capacity;
     private boolean status = true;
 
@@ -16,6 +19,10 @@ public class Provider implements ProviderInterface {
         this.capacity = capacity;
     }
 
+    /**
+     *
+     * @return the UUID of the provider.
+     */
     @Override
     public String get() {
         simulateExecution();
@@ -40,7 +47,7 @@ public class Provider implements ProviderInterface {
         return capacity;
     }
 
-    public void setStatus(boolean status){
+    public void setStatus(boolean status) {
         this.status = status;
     }
 

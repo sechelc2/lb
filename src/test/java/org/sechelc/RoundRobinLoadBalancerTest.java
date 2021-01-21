@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class RoundRobinLoadBalancerTest extends BaseLoadBalancerTest {
 
     public static final int CAPACITY = 3;
-    private RoundRobinLoadBalancer victim = new RoundRobinLoadBalancer();
+    private final RoundRobinLoadBalancer victim = new RoundRobinLoadBalancer();
 
     /**
      * step 4 test

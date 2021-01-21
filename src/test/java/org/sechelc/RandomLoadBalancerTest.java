@@ -1,5 +1,6 @@
 package org.sechelc;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.sechelc.loadbalancer.BaseLoadBalancer;
 import org.sechelc.loadbalancer.RandomLoadBalancer;
@@ -13,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class RandomLoadBalancerTest extends BaseLoadBalancerTest {
     public static final int CAPACITY = 3;
     public static final int UUID = 11;
-    private RandomLoadBalancer victim = new RandomLoadBalancer();
+    private final RandomLoadBalancer victim = new RandomLoadBalancer();
 
     /**
      * step 3 test

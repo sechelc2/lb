@@ -2,13 +2,17 @@ package org.sechelc.loadbalancer;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
+/**
+ * Concrete implementation of BaseLoadBalancer.
+ * Implements a round robin strategy for the provider index.
+ */
 public class RoundRobinLoadBalancer extends BaseLoadBalancer {
-    private AtomicInteger currentIndex = new AtomicInteger(0);
+    private final AtomicInteger currentIndex = new AtomicInteger(0);
 
-    public RoundRobinLoadBalancer() {
-        super();
-    }
-
+    /**
+     *
+     * @return a provider index in a round robin fashion.
+     */
     public int getNextProviderIndex() {
         return currentIndex.getAndUpdate(this::incrementCurrentIndex);
 

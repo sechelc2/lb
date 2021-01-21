@@ -12,6 +12,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * Base class for our implementation.
  * Contains common methods for out load balancers.
+ * TODO future improvements: extract the checks into Validators and move the HealthCheck functionality to a different class.
  */
 public abstract class BaseLoadBalancer implements LoadBalancerInterface, ProviderInterface {
     private static final ScheduledExecutorService executorService = Executors.newScheduledThreadPool(1);
